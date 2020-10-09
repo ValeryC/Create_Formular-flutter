@@ -11,7 +11,7 @@ class _ContactListState extends State<ContactList> {
     Contact(name: 'Lux', imageProfil: 'image-1.jpg'),
     Contact(name: 'Yasuo', imageProfil: 'image-2.jpg'),
     Contact(name: 'Heimer', imageProfil: 'image-3.jpg'),
-    Contact(name: 'Jarvan', imageProfil: ''),
+    Contact(name: 'Jarvan', imageProfil: 'image-4.jpg'),
     Contact(name: 'Neeko', imageProfil: ''),
     Contact(name: 'Lulu', imageProfil: ''),
    
@@ -44,7 +44,7 @@ Color _color =Colors.grey;
                         Navigator.pushReplacementNamed(context, '/detailContact',
                         arguments: {
                           'imageProfil': contact.imageProfil,
-                          'nom': contact.name
+                          'name': contact.name
                         });
                       },
                       child: Text('DETAIL'),

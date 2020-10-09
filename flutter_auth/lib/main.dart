@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/form.dart';
 import 'package:flutter_auth/contact_list.dart';
+import 'package:flutter_auth/detailContact.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
           routes: {
         '/formulaire' : (context) => Formular(),
         '/contactList': (context) => ContactList(),
+        '/detailContact' : (context) => DetailContact(),
       },
     );
   }
