@@ -49,6 +49,7 @@ class Formular extends StatelessWidget{
                       labelText: 'Confirm Password',
                       border: OutlineInputBorder()
                     ),
+                     obscureText: true,
                     onChanged: (val)=> confirmPass = val,
                     validator: (val) => confirmPass !=password? 'Confirm your password':null,
                   ),
@@ -59,7 +60,7 @@ class Formular extends StatelessWidget{
                     ),
                     onPressed: (){
                       if(_keyform.currentState.validate()){
-                        print('$email and $password');
+                        Navigator.pushReplacementNamed(context, '/contactList');
                       }
                     },
                     borderSide: BorderSide(width:1.0, color: Colors.lightBlue),
@@ -76,7 +77,7 @@ class Formular extends StatelessWidget{
                     color: Colors.blue,
                     onPressed: (){
                          if(_keyform.currentState.validate()){
-                        print('$email and $password');
+                        Navigator.pushReplacementNamed(context, '/contactList');
                       }
                     },
               

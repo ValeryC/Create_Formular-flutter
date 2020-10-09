@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/form.dart';
+import 'package:flutter_auth/contact_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,11 +13,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       theme: ThemeData(
-  
         primarySwatch: Colors.blue,
+        buttonColor: Colors.lightBlue,
+        buttonTheme: ButtonThemeData(
+          textTheme: ButtonTextTheme.primary,
+        )
       ),
-      home: Formular(),
+     
        debugShowCheckedModeBanner: false,
+          
+      initialRoute: '/formulaire',    
+          routes: {
+        '/formulaire' : (context) => Formular(),
+        '/contactList': (context) => ContactList(),
+      },
     );
   }
 }
